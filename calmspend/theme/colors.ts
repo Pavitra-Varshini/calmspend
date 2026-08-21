@@ -1,85 +1,106 @@
 export const LightColors = {
-  primary: "#6C63FF",
-  primaryLight: "#EEF0FF",
-  primaryDark: "#4B44CC",
-  accent: "#FF6B6B",
-  accentLight: "#FFF0F0",
-  success: "#2ECC71",
-  successLight: "#E8FAF1",
-  warning: "#F39C12",
-  warningLight: "#FEF9EC",
-  danger: "#E74C3C",
-  dangerLight: "#FEF0EF",
+  // ── Primary (Sage green) ──────────────────────────────
+  primary: "#C2D491", // brand, buttons, progress bars
+  primarySubtle: "#D6E7A8", // hover bg, chips
+  primaryLight: "#F2F6E4", // tint bg, selected rows, tag fills
+  primaryDark: "#6B983F", // text on light bg, icon fills
+  primaryDeep: "#4A6B2A", // dark-mode pressed states
 
-  background: "#F7F8FC",
-  surface: "#FFFFFF",
-  surfaceSecondary: "#F0F1F7",
-  border: "#E8E9F0",
-  borderLight: "#F2F3FA",
+  // ── Accent (Blush coral) ─────────────────────────────
+  accent: "#E88B8B", // overspend, alerts, danger indicators
+  accentSubtle: "#F5CECE", // chip bg, badge fills
+  accentLight: "#FFF0F0", // alert section bg
+  accentDark: "#B83A3A", // text on light bg
+  accentDeep: "#7A2020", // dark-mode fills
 
-  text: "#1A1A2E",
-  textSecondary: "#6B7280",
-  textMuted: "#9CA3AF",
+  // ── Neutral surfaces ──────────────────────────────────
+  background: "#F7F8F4", // app canvas (sage-tinted white)
+  surface: "#FFFFFF", // cards, sheets, modals
+  surfaceTint: "#EDF1E6", // selected rows, elevated card
+  border: "#D8DDD0", // dividers, outlines
+  borderLight: "#EDF1E6", // subtle separators
+
+  // ── Text ─────────────────────────────────────────────
+  text: "#6B983F", // primary — deep forest, not pure black
+  textSecondary: "#5A6B50", // supporting copy
+  textMuted: "#9AA88C", // hints, placeholders, captions
   textInverse: "#FFFFFF",
 
+  // ── Semantic ─────────────────────────────────────────
+  success: "#6B983F", // reuse primaryDark for success
+  successLight: "#F2F6E4",
+  warning: "#F6C864",
+  warningLight: "#FEF8E6",
+  danger: "#E88B8B", // reuse accent for danger
+  dangerLight: "#FFF0F0",
+
+  // ── Category colors ───────────────────────────────────
+  food: "#FF8A65",
+  transport: "#4DB6AC",
+  shopping: "#E88B8B", // accent — feels natural
+  health: "#A8D8B0",
+  entertainment: "#B39DDB",
+  bills: "#F6C864",
+  savings: "#C2D491", // primary — savings = calm growth
+  other: "#B0B8A8",
+
+  // ── Tab bar ───────────────────────────────────────────
+  tabBar: "#EDF1E6",
+  tabBarBorder: "#EDF1E6",
+  tabBarActive: "#6B983F",
+  tabBarInactive: "#555b50",
+
   card: "#FFFFFF",
-  cardShadow: "rgba(108, 99, 255, 0.08)",
-
-  food: "#FF6B6B",
-  transport: "#4ECDC4",
-  shopping: "#FFE66D",
-  health: "#A8E6CF",
-  entertainment: "#C3A6FF",
-  bills: "#FFB347",
-  savings: "#6C63FF",
-  other: "#B0B0B0",
-
-  tabBar: "#FFFFFF",
-  tabBarBorder: "#F0F1F7",
-  tabBarActive: "#6C63FF",
-  tabBarInactive: "#9CA3AF",
+  cardShadow: "rgba(107, 152, 63, 0.08)", // sage-tinted shadow
 };
 
 export const DarkColors: typeof LightColors = {
-  primary: "#7C73FF",
-  primaryLight: "#1E1B4B",
-  primaryDark: "#9D95FF",
-  accent: "#FF6B6B",
+  primary: "#8FB85C",
+  primarySubtle: "#2A4A1A",
+  primaryLight: "#1A2A10",
+  primaryDark: "#C2D491",
+  primaryDeep: "#DDEABC",
+
+  accent: "#E88B8B",
+  accentSubtle: "#4A1C1C",
   accentLight: "#2D1515",
-  success: "#2ECC71",
-  successLight: "#0D2318",
-  warning: "#F39C12",
-  warningLight: "#251A04",
-  danger: "#E74C3C",
-  dangerLight: "#2D0F0D",
+  accentDark: "#F5AEAE",
+  accentDeep: "#FACCCC",
 
-  background: "#0F0F1A",
-  surface: "#1A1A2E",
-  surfaceSecondary: "#252540",
-  border: "#2E2E4A",
-  borderLight: "#1E1E35",
+  background: "#0F1510",
+  surface: "#1A2418",
+  surfaceTint: "#233020",
+  border: "#2E402A",
+  borderLight: "#1A2A18",
 
-  text: "#F0F0FF",
-  textSecondary: "#9CA3AF",
-  textMuted: "#6B7280",
-  textInverse: "#1A1A2E",
+  text: "#E8EFE0",
+  textSecondary: "#8AA880",
+  textMuted: "#5A7050",
+  textInverse: "#1A2214",
 
-  card: "#1A1A2E",
-  cardShadow: "rgba(0,0,0,0.4)",
+  success: "#8FB85C",
+  successLight: "#1A2A10",
+  warning: "#F6C864",
+  warningLight: "#2A200A",
+  danger: "#E88B8B",
+  dangerLight: "#2D1515",
 
-  food: "#FF6B6B",
-  transport: "#4ECDC4",
-  shopping: "#FFE66D",
-  health: "#A8E6CF",
-  entertainment: "#C3A6FF",
-  bills: "#FFB347",
-  savings: "#7C73FF",
-  other: "#6B7280",
+  food: "#FF8A65",
+  transport: "#4DB6AC",
+  shopping: "#E88B8B",
+  health: "#A8D8B0",
+  entertainment: "#B39DDB",
+  bills: "#F6C864",
+  savings: "#8FB85C",
+  other: "#6B7B60",
 
-  tabBar: "#1A1A2E",
-  tabBarBorder: "#2E2E4A",
-  tabBarActive: "#7C73FF",
-  tabBarInactive: "#6B7280",
+  tabBar: "#1A2418",
+  tabBarBorder: "#2E402A",
+  tabBarActive: "#C2D491",
+  tabBarInactive: "#5A7050",
+
+  card: "#1A2418",
+  cardShadow: "rgba(0, 0, 0, 0.35)",
 };
 
 export type AppColors = typeof LightColors;

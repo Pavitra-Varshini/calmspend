@@ -12,6 +12,7 @@ import { useExpenseStore } from "../../store/useExpenseStore";
 import { getQuickInsight } from "../../services/aiService";
 import { getCategoryById } from "../../constants/categories";
 import { router } from "expo-router";
+import CustomHeader from "../../components/CustomHeader";
 
 export default function Dashboard() {
   const { colors } = useTheme();
@@ -211,10 +212,11 @@ export default function Dashboard() {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <View style={s.header}>
-          <Text style={s.greeting}>Good day 👋</Text>
-          <Text style={s.appName}>CalmSpend AI</Text>
-        </View>
+
+        <CustomHeader
+          title="CalmSpend AI"
+          subTitle="Your personal financial assistant"
+        />
 
         {/* Balance Card */}
         <View style={s.balanceCard}>

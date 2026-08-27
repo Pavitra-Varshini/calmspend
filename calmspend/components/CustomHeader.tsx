@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { colors } from "../src/theme/colors";
+import { useTheme } from "@/theme/useTheme";
 
 type IoniconsName = React.ComponentProps<typeof Ionicons>["name"];
 
@@ -35,6 +35,35 @@ const CustomHeader = ({
   subTitle,
 }: CustomHeaderProps) => {
   const router = useRouter();
+  const { colors: C, isDark } = useTheme();
+
+  const styles = StyleSheet.create({
+    container: {
+      // flexDirection: "row",
+      // alignItems: "center",
+      padding: 16,
+      backgroundColor: C.primaryDark,
+      elevation: 4,
+      justifyContent: "center",
+      borderBottomRightRadius: 20,
+      borderBottomLeftRadius: 20,
+      marginBottom: 10,
+    },
+    titleContainer: {
+      alignItems: "flex-start",
+      color: "white",
+    },
+    subTitle: {
+      fontSize: 14,
+      color: C.textSecondary,
+    },
+    title: {
+      fontSize: 20,
+      fontWeight: "bold",
+      // textAlign: "center",
+      color: C.text,
+    },
+  });
 
   return (
     <View style={styles.container}>
@@ -45,52 +74,5 @@ const CustomHeader = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 16,
-    backgroundColor: colors.primary,
-    elevation: 4,
-    justifyContent: "center",
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
-    ma
-  },
-  titleContainer: {
-    justifyContent: "center",
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    color: colors.textPrimary,
-  },
-  subTitle: {
-    fontSize: 14,
-    color: colors.textSecondary,
-    marginLeft: 8,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginLeft: 16,
-    textAlign: "center",
-    color: "#2E6F40",
-  },
-  backBtn: {
-    position: "absolute",
-    left: 0,
-  },
-  rightIconContainer: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    position: "absolute",
-    right: 20,
-    alignItems: "center",
-  },
-  secondIconBtn: {
-    marginRight: 15,
-  },
-});
 
 export default CustomHeader;

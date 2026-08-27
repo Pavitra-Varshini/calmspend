@@ -55,7 +55,7 @@ export const LightColors = {
 };
 
 export const DarkColors: typeof LightColors = {
-  primary: "#8FB85C",
+  primary: "#97b178",
   primarySubtle: "#2A4A1A",
   primaryLight: "#1A2A10",
   primaryDark: "#C2D491",
@@ -67,8 +67,8 @@ export const DarkColors: typeof LightColors = {
   accentDark: "#F5AEAE",
   accentDeep: "#FACCCC",
 
-  background: "#0F1510",
-  surface: "#1A2418",
+  background: "#414f44",
+  surface: "#2a3429",
   surfaceTint: "#233020",
   border: "#2E402A",
   borderLight: "#1A2A18",
